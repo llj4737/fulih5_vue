@@ -178,6 +178,7 @@
 <script>
 import * as api from "../config/api";
 import $ from "jquery";
+
 export default {
   name: "Welfare",
   data() {
