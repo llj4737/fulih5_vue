@@ -1,9 +1,9 @@
 module.exports = {
     devServer: {
         // 设置主机地址
-        host: 'localhost',
+        host: 'localhost',  //http://148.70.195.134/
         // 设置默认端口
-        port: 8080,
+        port: 80,
         // 设置代理
         proxy: {
             '/api': {

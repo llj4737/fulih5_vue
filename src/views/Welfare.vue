@@ -302,6 +302,8 @@ export default {
     async dealSignTask() {
       let { status, taskId } = this.signTask[0];
       if (status == 1) {
+        this.showLottery = true;
+        this.showLotteryWrap = true;
         let res = await api.finishTask({
           username: this.username,
           status: "3",
@@ -315,13 +317,13 @@ export default {
       } else {
         this.isSign = true;
         this.getLotteryInfo();
-        // this.showLottery = true;
-        // this.showLotteryWrap = true;
+        
         this.dealWeekend();
         // this.getTask(this.dealWeekend);
       }
     },
     dealWeekend() {
+      console.log(this.signTask[0])
       this.dayList = this.signTask[0].list;
       this.willReceive = this.task.reduce(
         (prev, cur) => (cur.status == 2 ? ++prev : prev),
