@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 /dist
-/public/static
+dist.zip
+test.js
 package-lock.json
 
 # local env files
